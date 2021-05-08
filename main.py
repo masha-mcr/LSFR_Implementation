@@ -13,8 +13,6 @@ def generate_key(key_size: int, reg_size: int, indexes: list):
         register[0] = new_bit
         p = np.array([pushed_bit])
         key = np.append(key, p)
-
-    print(key)
     return key
 
 
@@ -31,6 +29,6 @@ file = open('data.txt', 'rb')
 content = list(file.read())
 encrypted_data = convert(content)
 decrypted_data = convert(encrypted_data)
-print("File content: {}\nEncrypted: {}\nDecrypted: {}".format(content, encrypted_data, decrypted_data))
+print("File contents: {}\nEncrypted: {}\nDecrypted: {}".format(content, encrypted_data, decrypted_data))
 
 
